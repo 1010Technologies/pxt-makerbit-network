@@ -1,13 +1,13 @@
 const enum NetworkConnection {
   //% block="None"
   NONE = 0,
-  //% block="ESP device"
+  //% block="ESP Device"
   ESP = 1,
   //% block="WiFi"
   WIFI = 2,
   //% block="Internet"
   INTERNET = 3,
-  //% block="Project group"
+  //% block="Project Group"
   PROJECT_GROUP = 4,
 }
 
