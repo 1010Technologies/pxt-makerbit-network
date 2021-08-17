@@ -1,0 +1,30 @@
+{
+    "name": "MakerBit-Network",
+    "version": "2.1.3",
+    "description": "MakeCode extension for network and IoT",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "serial-read": "github:philipphenkel/pxt-serial-read#v0.1.3",
+        "is-simulator": "github:philipphenkel/pxt-is-simulator#v0.0.2",
+        "background": "github:1010Technologies/pxt-makerbit-background#v0.0.7"
+    },
+    "files": [
+        "README.md",
+        "net.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0,
+                    "pairing_mode": 0
+                }
+            }
+        }
+    }
+}
