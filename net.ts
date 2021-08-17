@@ -597,17 +597,6 @@ namespace makerbit {
     }
 
     /**
-     * Connects the ESP8266 device to the 5V I/O Grove socket.
-     */
-    //% subcategory="Network"
-    //% blockId="makerbit_zoom_connect_esp_io_grove_5v"
-    //% block="zoom connect ESP to 5V I/O Grove socket"
-    //% weight=98
-    export function connectESPtoIoGrove5V(): void {
-      connectESP(DigitalPin.P5, DigitalPin.P8);
-    }
-
-    /**
      * Connects to the ESP8266 device.
      * @param espTx ESP8266 device transmitter pin (TX)
      * @param espRx ESP8266 device receiver pin (RX)
@@ -624,7 +613,7 @@ namespace makerbit {
     //% espTX.fieldOptions.columns=3
     //% espTX.fieldOptions.tooltips="false"
     //% weight=97
-    //% blockHidden=true
+    //% blockHidden=false
     export function connectESP(espRX: DigitalPin, espTX: DigitalPin): void {
       if (control.isSimulator()) {
         serialWriteString = (text: string) => { };
