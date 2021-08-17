@@ -1,6 +1,6 @@
 # MakerBit Network
 
-[![Build Status](https://travis-ci.org/1010Technologies/pxt-makerbit-network.svg?branch=main)](https://travis-ci.org/1010Technologies/pxt-makerbit-network)
+![Build Status](https://github.com/1010Technologies/pxt-makerbit-network/actions/workflows/makecode.yml/badge.svg)
 
 MakeCode extension for network and IoT.
 
