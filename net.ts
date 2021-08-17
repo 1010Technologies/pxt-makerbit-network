@@ -3,12 +3,12 @@ const enum NetworkConnection {
   NONE = 0,
   //% block="ESP device"
   ESP = 1,
-  //% block="WiFi network"
+  //% block="WiFi"
   WIFI = 2,
-  //% block="internet"
+  //% block="Internet"
   INTERNET = 3,
-  //% block="project"
-  PROJECT = 4,
+  //% block="Project group"
+  PROJECT_GROUP = 4,
 }
 
 const enum TimeZone {

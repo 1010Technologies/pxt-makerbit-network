@@ -1,12 +1,12 @@
 makerbit.net.connectESP(DigitalPin.P0, DigitalPin.P1);
 makerbit.net.connectWiFi("network", "secret");
 makerbit.net.connectProjectGroup("123-456-789", "1");
-makerbit.net.waitForConnection(NetworkConnection.PROJECT);
+makerbit.net.waitForConnection(NetworkConnection.PROJECT_GROUP);
 
 const isConnected: boolean = makerbit.net.isConnected(
-  NetworkConnection.PROJECT
+  NetworkConnection.PROJECT_GROUP
 );
-const status: number = makerbit.net.getConnection();
+const level: number = makerbit.net.getConnection();
 const error: number = makerbit.net.getLastError();
 const device: string = makerbit.net.getDevice();
 
