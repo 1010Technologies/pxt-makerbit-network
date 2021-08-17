@@ -269,8 +269,8 @@ namespace makerbit {
      * Registers code to run when the micro:bit receives a string.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_receive_string"
-    //% block="on zoom received"
+    //% blockId="makerbit_network_on_receive_string"
+    //% block="on network received"
     //% draggableParameters=reporter
     //% weight=49
     //% blockHidden=true
@@ -286,8 +286,8 @@ namespace makerbit {
      * Do something when the micro:bit receives a number.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_receive_number"
-    //% block="on zoom received"
+    //% blockId="makerbit_network_on_receive_number"
+    //% block="on network received"
     //% draggableParameters=reporter
     //% weight=50
     //% blockHidden=true
@@ -303,8 +303,8 @@ namespace makerbit {
      * Do something when the micro:bit receives a screenshot.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_receive_screenshot"
-    //% block="on zoom received"
+    //% blockId="makerbit_network_on_receive_screenshot"
+    //% block="on network received"
     //% draggableParameters=reporter
     //% weight=48
     export function onReceivedScreenshot(
@@ -319,8 +319,8 @@ namespace makerbit {
      * Do something when the micro:bit receives a number in a channel.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_receive_number_in_channel"
-    //% block="on zoom received in channel %channel"
+    //% blockId="makerbit_network_on_receive_number_in_channel"
+    //% block="on network received in channel %channel"
     //% draggableParameters=reporter
     //% weight=47
     export function onReceivedNumberInChannel(
@@ -337,8 +337,8 @@ namespace makerbit {
      * Do something when the micro:bit receives a string in a channel.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_receive_string_in_channel"
-    //% block="on zoom received in channel %channel"
+    //% blockId="makerbit_network_on_receive_string_in_channel"
+    //% block="on network received in channel %channel"
     //% draggableParameters=reporter
     //% weight=46
     export function onReceivedStringInChannel(
@@ -355,8 +355,8 @@ namespace makerbit {
      * Do something when the ESP notifies an error.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_error"
-    //% block="on zoom error"
+    //% blockId="makerbit_network_on_error"
+    //% block="on network error"
     //% weight=29
     export function onError(handler: () => void): void {
       autoConnectToESP();
@@ -367,8 +367,8 @@ namespace makerbit {
      * Do something when the connection level changes.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_on_connection"
-    //% block="on zoom connection"
+    //% blockId="makerbit_network_on_connection"
+    //% block="on network connection"
     //% weight=30
     export function onConnection(handler: () => void): void {
       autoConnectToESP();
@@ -445,7 +445,7 @@ namespace makerbit {
      * Returns the time.
      */
     //% subcategory="Time"
-    //% blockId=makerbit_zoom_time
+    //% blockId=makerbit_network_time
     //% block="time"
     //% weight=54
     export function getTime(): string {
@@ -458,7 +458,7 @@ namespace makerbit {
      * Returns the date.
      */
     //% subcategory="Time"
-    //% blockId=makerbit_zoom_date
+    //% blockId=makerbit_network_date
     //% block="date"
     //% weight=53
     export function getDate(): string {
@@ -471,7 +471,7 @@ namespace makerbit {
      * Returns the weekday as a decimal number, where 0 is Sunday and 6 is Saturday.
      */
     //% subcategory="Time"
-    //% blockId=makerbit_zoom_weekday
+    //% blockId=makerbit_network_weekday
     //% block="weekday"
     //% weight=54
     export function getWeekday(): number {
@@ -505,7 +505,7 @@ namespace makerbit {
      * Sets the time zone with an offset from UTC.
      */
     //% subcategory="Time"
-    //% blockId=makerbit_zoom_set_time_zone_with_utc_offset
+    //% blockId=makerbit_network_set_time_zone_with_utc_offset
     //% block="set time zone to UTC offset of %hours hours and %minutes minutes"
     //% hours.min=-12 hours.max=14
     //% minutes.min=0 minutes.max=59
@@ -519,7 +519,7 @@ namespace makerbit {
      * Sets the time zone.
      */
     //% subcategory="Time"
-    //% blockId=makerbit_zoom_set_time_zone
+    //% blockId=makerbit_network_set_time_zone
     //% block="set time zone to %timezone=makerbit_helper_timezone"
     //% weight=55
     export function setTimeZone(timeZone: string): void {
@@ -536,8 +536,8 @@ namespace makerbit {
      * @param password password
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_connect_wifi"
-    //% block="zoom connect to WiFi network %ssid | and password %password"
+    //% blockId="makerbit_network_connect_wifi"
+    //% block="network connect to WiFi network %ssid | and password %password"
     //% weight=96
     export function connectWiFi(ssid: string, password: string): void {
       autoConnectToESP();
@@ -589,8 +589,8 @@ namespace makerbit {
      * Connects the ESP8266 device to the 3V Analog Grove socket.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_connect_esp_analog_grove_3v"
-    //% block="zoom connect ESP to 3V Analog Grove socket"
+    //% blockId="makerbit_network_connect_esp_analog_grove_3v"
+    //% block="network connect ESP to 3V Analog Grove socket"
     //% weight=99
     export function connectESPtoAnalogGrove3V(): void {
       connectESP(DigitalPin.P0, DigitalPin.P1);
@@ -602,8 +602,8 @@ namespace makerbit {
      * @param espRx ESP8266 device receiver pin (RX)
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_connect_esp"
-    //% block="zoom connect with ESP RX attached to %espRX | and ESP TX to %espTX"
+    //% blockId="makerbit_network_connect_esp"
+    //% block="network connect with ESP RX attached to %espRX | and ESP TX to %espTX"
     //% espRX.defl=DigitalPin.P0
     //% espRX.fieldEditor="gridpicker"
     //% espRX.fieldOptions.columns=3
@@ -681,8 +681,8 @@ namespace makerbit {
      * Returns the last error code.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_get_last_error"
-    //% block="zoom error"
+    //% blockId="makerbit_network_get_last_error"
+    //% block="network error"
     //% weight=88
     export function getLastError(): number {
       if (!espState) {
@@ -695,8 +695,8 @@ namespace makerbit {
      * Returns the ESP device firmware version.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_get_device"
-    //% block="zoom device version"
+    //% blockId="makerbit_network_get_device"
+    //% block="network device version"
     //% weight=87
     //% blockHidden=true
     export function getDevice(): string {
@@ -710,8 +710,8 @@ namespace makerbit {
      * Returns the connection level.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_get_connection"
-    //% block="zoom connection"
+    //% blockId="makerbit_network_get_connection"
+    //% block="network connection"
     //% weight=89
     export function getConnection(): NetworkConnection {
       if (!espState) {
@@ -730,8 +730,8 @@ namespace makerbit {
      * Broadcasts a string to other micro:bits that are connected to the same project.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_send_string"
-    //% block="zoom send string %value"
+    //% blockId="makerbit_network_send_string"
+    //% block="network send string %value"
     //% value.shadowOptions.toString=true
     //% weight=79
     //% blockHidden=true
@@ -744,8 +744,8 @@ namespace makerbit {
      * Broadcasts a number to other micro:bits that are connected to the same project and group.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_send_number"
-    //% block="zoom send number %value"
+    //% blockId="makerbit_network_send_number"
+    //% block="network send number %value"
     //% weight=80
     //% blockHidden=true
     export function sendNumber(value: number): void {
@@ -757,8 +757,8 @@ namespace makerbit {
      * Broadcasts a screenshot to other micro:bits that are connected to the same project and group.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_send_screenshot"
-    //% block="zoom send screenshot"
+    //% blockId="makerbit_network_send_screenshot"
+    //% block="network send screenshot"
     //% weight=78
     export function sendScreenshot(): void {
       autoConnectToESP();
@@ -769,8 +769,8 @@ namespace makerbit {
      * Broadcasts a number via a channel to other micro:bits that are connected to the same project and group.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_send_number_to_channel"
-    //% block="zoom send|number %value || to channel %channel"
+    //% blockId="makerbit_network_send_number_to_channel"
+    //% block="network send|number %value || to channel %channel"
     //% expandableArgumentMode="toggle"
     //% weight=80
     export function sendNumberToChannel(value: number, channel?: string): void {
@@ -785,8 +785,8 @@ namespace makerbit {
      * Broadcasts a string via a channel to other micro:bits that are connected to the same same project and group.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_send_string_to_channel"
-    //% block="zoom send|string %value || to channel %channel"
+    //% blockId="makerbit_network_send_string_to_channel"
+    //% block="network send|string %value || to channel %channel"
     //% expandableArgumentMode="toggle"
     //% weight=79
     export function sendStringToChannel(value: string, channel?: string): void {
@@ -798,8 +798,8 @@ namespace makerbit {
      * Sets the project and group for the Internet communications. A micro:bit can be connected to exactly one project and group at any time.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_connect_project_group"
-    //% block="zoom connect to project %project and group %group"
+    //% blockId="makerbit_network_connect_project_group"
+    //% block="network connect to project %project and group %group"
     //% project.defl=123-456-789
     //% project.defl=1
     //% weight=95
@@ -815,8 +815,8 @@ namespace makerbit {
      * False otherwise.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_is_connected"
-    //% block="zoom is connected to %state"
+    //% blockId="makerbit_network_is_connected"
+    //% block="network is connected to %state"
     //% weight=92
     export function isConnected(level: NetworkConnection): boolean {
       if (level === NetworkConnection.NONE) {
@@ -837,8 +837,8 @@ namespace makerbit {
      * False otherwise.
      */
     //% subcategory="Network"
-    //% blockId="makerbit_zoom_wait_for_connection"
-    //% block="zoom wait for connection to %state"
+    //% blockId="makerbit_network_wait_for_connection"
+    //% block="network wait for connection to %state"
     //% weight=91
     export function waitForConnection(level: NetworkConnection): void {
       autoConnectToESP();
