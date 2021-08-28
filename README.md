@@ -2,7 +2,11 @@
 
 ![Build Status](https://github.com/1010Technologies/pxt-makerbit-network/actions/workflows/makecode.yml/badge.svg)
 
+![MakerBit](https://github.com/1010Technologies/pxt-makerbit-network/raw/main/icon.png "MakerBit Network")
+
 MakeCode extension for network and IoT.
+
+
 
 ## MakerBit Board
 
