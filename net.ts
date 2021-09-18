@@ -565,7 +565,7 @@ namespace makerbit {
           if (espState.device === INVALID_DEVICE_VERSION) {
             serialWriteString("device\n");
           } else {
-            background.remove(espState.obtainDeviceJobId);
+            background.remove(background.Thread.Priority, espState.obtainDeviceJobId);
 
             // poll for intial connection status
             espState.obtainConnectionStatusJobId = background.schedule(
@@ -573,16 +573,18 @@ namespace makerbit {
                 if (espState.connection <= NetworkConnection.NONE) {
                   serialWriteString("connection-status\n");
                 } else {
-                  background.remove(espState.obtainConnectionStatusJobId);
+                  background.remove(background.Thread.Priority, espState.obtainConnectionStatusJobId);
                 }
               },
+              background.Thread.Priority,
+              background.Mode.Repeat,
               1150,
-              background.Mode.Repeat
             );
           }
         },
+        background.Thread.Priority,
+        background.Mode.Repeat,
         1000,
-        background.Mode.Repeat
       );
     }
 
@@ -658,8 +660,9 @@ namespace makerbit {
 
         background.schedule(
           notifySubscriptionUpdates,
-          20,
-          background.Mode.Repeat
+          background.Thread.Priority,
+          background.Mode.Repeat,
+          20
         );
 
         // Always notify connection level NONE in the beginning
