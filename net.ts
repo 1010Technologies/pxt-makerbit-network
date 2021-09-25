@@ -70,6 +70,7 @@ namespace makerbit {
       obtainConnectionStatusJobId: number;
       transmissionControl: boolean;
       clock: Clock;
+      hasSubscriptionUpdate: boolean;
     }
 
     const STRING_TOPIC = "s_";
@@ -138,6 +139,10 @@ namespace makerbit {
     }
 
     function notifySubscriptionUpdates(): void {
+      if (!espState.hasSubscriptionUpdate) {
+        return;
+      }
+      espState.hasSubscriptionUpdate = false;
       espState.subscriptions.forEach((subscription) => {
         subscription.notifyUpdate();
       });
@@ -184,6 +189,7 @@ namespace makerbit {
         if (topic === subscription.topic) {
           isExpectedTopic = true;
           subscription.setValue(value);
+          espState.hasSubscriptionUpdate = true;
         }
       });
 
@@ -256,6 +262,7 @@ namespace makerbit {
                 const errorSub = espState.subscriptions.find(sub => sub.topic === ERROR_TOPIC);
                 if (errorSub) {
                   errorSub.setValue("71");
+                  espState.hasSubscriptionUpdate = true;
                 }
                 espState.lastError = 71;
               }
@@ -654,6 +661,7 @@ namespace makerbit {
           obtainConnectionStatusJobId: 0,
           transmissionControl: true,
           clock: undefined,
+          hasSubscriptionUpdate: false,
         };
 
         control.runInParallel(readSerialMessages);
