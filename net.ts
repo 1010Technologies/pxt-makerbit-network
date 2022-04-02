@@ -440,11 +440,7 @@ namespace makerbit {
           lastTimeUpdate: -1,
         };
       }
-      if (
-        espState.clock.lastTimeUpdate < 0 &&
-        espState.connection >= NetworkConnection.INTERNET
-      ) {
-        espState.clock.lastTimeUpdate = 0
+      if (espState.clock.lastTimeUpdate < 0) {
         requestDateTimeUpdate();
       }
     }
