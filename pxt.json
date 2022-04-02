@@ -1,6 +1,6 @@
 {
     "name": "MakerBit-Network",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "description": "MakeCode extension for network and IoT",
     "license": "MIT",
     "dependencies": {
