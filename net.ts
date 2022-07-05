@@ -704,7 +704,7 @@ namespace makerbit {
      */
     //% subcategory="Network"
     //% blockId="makerbit_network_get_device"
-    //% block="network ESP device"
+    //% block="network device version"
     //% weight=87
     //% blockHidden=false
     export function getDevice(): string {
